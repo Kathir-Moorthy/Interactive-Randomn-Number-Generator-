@@ -1,0 +1,339 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f5;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Popup Styling */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background with transparency */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.popup-content {
+    background-color: #fff;
+    color: #333;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 300px;
+    width: 90%; /* Ensure it doesn't overflow */
+    text-align: justify;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9rem; /* Reduced base font size */
+}
+
+.popup-content h2 {
+    font-size: 1.2rem; /* Slightly smaller heading */
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.popup-content p,
+.popup-content ul {
+    font-size: 0.9rem; /* Reduced font size for paragraphs and list items */
+}
+
+.popup-content .close-popup-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 1rem; /* Slightly smaller button text */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    width: fit-content; /* Adjust button size based on text */
+    margin-left: auto;
+    margin-right: auto; /* Center the button */
+}
+
+.popup-content .close-popup-btn:hover {
+    background-color: #45a049;
+}
+
+/* Styling for random number generator container */
+.randomn-container {
+    margin-top: 250px;
+    text-align: center;
+    padding: 18px; /* Reduced padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.randomn-container.light {
+    background-color: #ffffff;
+    color: #333;
+}
+
+.randomn-container.dark {
+    background-color: #333;
+    color: #ffffff !important;
+}
+
+h2 {
+    font-size: 1.4rem; /* Slightly smaller heading */
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem; /* Slightly smaller heading */
+    margin: 20px 0;
+}
+
+.range-inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.range-inputs label {
+  font-size: 1rem;
+  margin-right: 5px;
+}
+
+.range-inputs input {
+  width: 80px;
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.generate-btn,
+.favorite-btn,
+.theme-toggle,
+.reset-btn {
+    padding: 8px 12px; /* Reduced padding */
+    font-size: 0.9rem; /* Smaller font size */
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+/* Filter Options Styling */
+.filter-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.filter-options label {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-size: 1rem;
+    color: inherit;
+}
+
+.filter-options input[type="radio"] {
+    appearance: none; /* Remove default styling */
+    width: 20px;
+    height: 20px;
+    border: 2px solid #4caf50;
+    border-radius: 50%;
+    outline: none;
+    transition: background 0.3s;
+    margin-right: 8px;
+}
+
+.filter-options input[type="radio"]:checked {
+    background-color: #0573af; /* Green background for selected option */
+}
+
+.filter-options input[type="radio"]:checked::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: auto;
+}
+.generate-btn {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.favorite-btn {
+    background-color: #ff9800;
+    color: #fff;
+}
+
+.theme-toggle {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.reset-btn {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.history,
+.favorites {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.history h3,
+.favorites h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.history ul,
+.favorites ul {
+    list-style: none;
+    padding: 0;
+    max-height: 100px;
+    overflow-y: auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.history ul li,
+.favorites ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries for Responsiveness */
+
+/* Media Query for screens up to 768px */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem; /* Slightly smaller heading */
+    }
+
+    .popup-content {
+        max-width: 280px; /* Further reduce width for medium screens */
+        padding: 12px; /* Slightly smaller padding */
+    }
+
+    .popup-content h2 {
+        font-size: 1.1rem; /* Smaller heading */
+    }
+
+    .popup-content p,
+    .popup-content ul {
+        font-size: 0.85rem; /* Smaller font size for paragraphs and list items */
+    }
+
+    .popup-content .close-popup-btn {
+        padding: 8px 15px; /* Smaller button */
+        font-size: 0.9rem; /* Smaller button text */
+    }
+
+    .generate-btn,
+    .favorite-btn,
+    .theme-toggle{
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+    .filter-options {
+        gap: 10px;
+    }
+
+    .filter-options label {
+        font-size: 0.9rem; /* Slightly smaller font size on medium screens */
+    }
+
+    .filter-options input[type="radio"] {
+        width: 18px;
+        height: 18px;
+    }
+    .history h3,
+    .favorites h3 {
+        font-size: 1.1rem; /* Smaller sub-heading */
+    }
+}
+
+/* Media Query for screens up to 480px */
+@media (max-width: 480px) {
+    .randomn-container {
+        padding: 12px; /* Smaller padding for small screens */
+    }
+
+    h1 {
+        font-size: 2rem; /* Smaller heading */
+    }
+
+    h2 {
+        font-size: 1rem; /* Smaller heading */
+    }
+
+    .range-inputs input {
+        padding: 6px; /* Reduced padding */
+        width: 50px; /* Smaller width */
+    }
+
+    .generate-btn,
+    .favorite-btn,
+    .theme-toggle {
+        padding: 6px 10px; /* Reduced padding */
+        font-size: 0.8rem; /* Smaller button font */
+    }
+    .filter-options {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .filter-options label {
+        font-size: 0.8rem; /* Smaller font size on small screens */
+    }
+
+    .filter-options input[type="radio"] {
+        width: 16px;
+        height: 16px;
+    }
+    .history h3,
+    .favorites h3 {
+        font-size: 1rem; /* Smaller sub-heading */
+    }
+
+    .popup-content {
+        max-width: 230px; /* Reduce width even more for small screens */
+        padding: 8px; /* Smallest padding */
+    }
+
+    .popup-content h2 {
+        font-size: 1rem; /* Even smaller heading */
+    }
+
+    .popup-content p,
+    .popup-content ul {
+        font-size: 0.75rem; /* Even smaller font size */
+    }
+
+    .popup-content .close-popup-btn {
+        padding: 6px 12px; /* Smaller button */
+        font-size: 0.8rem; /* Smaller button text */
+    }
+}
