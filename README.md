@@ -35,10 +35,10 @@ This is a simple React-based **Interactive Random Number Generator App**. The ap
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/random-number-generator.git
+   https://github.com/Kathir-Moorthy/Interactive-Randomn-Number-Generator
 2. Navigate into the project directory:
    ```bash
-   cd random-number-generator
+   cd Interactive-Randomn-Number-Generator
 3. Install the dependencies:
    ```bash
    npm install
